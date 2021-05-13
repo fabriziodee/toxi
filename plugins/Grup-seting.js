@@ -7,10 +7,10 @@ let handler  = async (m, { conn, args, usedPrefix, command }) => {
 	await conn.updatePresence(m.chat, Presence.composing)
 	if (isClose === undefined)
 		throw `
-*Format salah! Contoh :*
+*Incorrect Format! Example :*
 
-  *○ ${usedPrefix + command} close*
-  *○ ${usedPrefix + command} open*
+  *➡️ ${usedPrefix + command} close*
+  *➡️ ${usedPrefix + command} open*
 `.trim()
 	await conn.groupSettingChange(m.chat, GroupSettingChange.messageSend, isClose)
 }
