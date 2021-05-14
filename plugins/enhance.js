@@ -4,8 +4,8 @@ const FormData = require('form-data')
 let handler = async (m) => {
   let q = m.quoted ? m.quoted : m
   let mime = (q.msg || q).mimetype || ''
-  if (!mime) throw 'Tidak ada foto'
-  if (!/image\/(jpe?g|png)/.test(mime)) throw `Mime ${mime} tidak support`
+  if (!mime) throw '*Give me a photo*'
+  if (!/image\/(jpe?g|png)/.test(mime)) throw `Mime ${mime} not supported`
   let img = await q.download()
   let body = new FormData
   body.append('image', img, 'image')
