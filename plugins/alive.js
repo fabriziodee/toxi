@@ -1,6 +1,6 @@
 let handler  = async (m, { conn, usedPrefix: _p }) => {
   conn.reply(m.chat, `
----------------- *[ ALIVE ]* ----------------
+- - - - - - - - - - - - - - - - *[ ALIVE ]* - - - - - - - - - - - - - - - -
 
 *Hey Bro I am Still Alive & Kicking 🥳*
 
@@ -10,9 +10,9 @@ _Contact Developer :_ *Wa.me/919544707896*
 _Branch :_ *master*
 _Version :_ *1.0.0*
 
-*Type {usedPrefix}menu for all Commands 😁*
+*Type !menu for all Commands 😁*
 
----------------- *[ ALIVE ]* ----------------
+- - - - - - - - - - - - - - - - *[ ALIVE ]* - - - - - - - - - - - - - - - -
 `.trim(), m)
 }
 handler.help = ['alive']
