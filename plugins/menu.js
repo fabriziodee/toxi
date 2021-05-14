@@ -82,7 +82,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
     let header = conn.menu.header || '╓───*【 %category 】*'
     let body   = conn.menu.body   || '║➥ *%cmd%islimit*'
     let footer = conn.menu.footer || '╙───────々\n'
-    let after  = conn.menu.after  || (conn.user.jid == global.conn.user.jid ? '' : ` `
+    let after  = conn.menu.after  || (conn.user.jid == global.conn.user.jid ? '' : `-----------------------`
     let _text  = before + '\n'
     for (let tag in groups) {
       _text += header.replace(/%category/g, tags[tag]) + '\n'
