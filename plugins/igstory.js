@@ -1,6 +1,6 @@
 let fetch = require('node-fetch')
 let handler = async (m, { conn, args }) => {
-  if (!args[0]) throw 'Uhm...url nya mana?'
+  if (!args[0]) throw '*Give me a URL*'
   let res = await fetch(global.API('xteam', '/dl/igs', {
     nama: args[0]
   }, 'APIKEY'))
@@ -19,7 +19,7 @@ let handler = async (m, { conn, args }) => {
   for (let { url, type, taken_at } of storylist)
     conn.sendFile(m.chat, url, 'ig' + (type == 'video' ? '.mp4' : '.jpg'), `
 @${username}
-Memposting pada ${new Date(taken_at * 1000).toLocaleDateString('id', dateConfig)}
+Post on ${new Date(taken_at * 1000).toLocaleDateString('id', dateConfig)}
 `, m)
   throw json.result
 }
