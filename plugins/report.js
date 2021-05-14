@@ -1,13 +1,13 @@
 // By RC047 :V
 
 let handler = async(m, { conn, text }) => {
-    if (!text) throw 'Silahkan masukkan laporan'
-    if (text.length > 300) throw 'Maaf Teks Terlalu Panjang, Maksimal 300 Teks!'
-    const laporan = `*「 REPORT 」*\nNomor : wa.me/${m.sender.split`@`[0]}\nPesan : ${text}`
+    if (!text) throw '*Please enter a report*'
+    if (text.length > 300) throw 'Sorry The Text Too Long, You Can Only Use 300 Text!'
+    const laporan = `*「 REPORT 」*\nNumber : wa.me/${m.sender.split`@`[0]}\nMessage : ${text}`
     for (let jid of global.owner.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').filter(v => v != conn.user.jid && v != '6281515860089@s.whatsapp.net'))
     m.reply(laporan, jid)
     m.reply(laporan, m.sender) // Mwehehehehe
-    m.reply('✔️Masalah telah di laporkan ke Owner Bot, laporan palsu/main2 tidak akan ditanggapi!')
+    m.reply('*✅️ Problem has been reported to Owner Bot, fake report/main2 will not be responded too!*')
 }
 handler.help = ['bug', 'report'].map(v => v + ' <laporan>')
 handler.tags = ['info']
