@@ -37,13 +37,13 @@ let handler = async (m, { conn, usedPrefix, command, text, args, isROwner }) => 
       return m.reply(`
 List option: welcome | delete | public | antilink | autolevelup | detect
 
-Contoh:
+Example:
 ${usedPrefix}enable welcome
 ${usedPrefix}disable welcome
 `.trim())
   }
   m.reply(`
-*${type}* berhasil di *${isEnable ? 'nyala' : 'mati'}kan* ${isAll ? 'untuk bot ini' : isUser ? '' : 'untuk chat ini'}
+*${type}* succeeded in *${isEnable ? 'flame' : 'die'}right* ${isAll ? 'For This Bot' : isUser ? '' : 'For This Chat'}
 `.trim())
 }
 handler.help = ['en', 'dis'].map(v => v + 'able <option>')
