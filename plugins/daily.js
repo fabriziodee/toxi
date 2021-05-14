@@ -3,7 +3,7 @@ let handler = async (m, { conn }) => {
     global.DATABASE._data.users[m.sender].exp += 500
     m.reply('*Congratulations, You Got +500 XP*')
     global.DATABASE._data.users[m.sender].lastclaim = new Date * 1
-  } else throw '*Sorry!! You have already claimed today's daily claim.*'
+  } else throw 'Sorry!! You have already claimed today's daily claim.'
 }
 handler.help = ['daily', 'claim']
 handler.tags = ['xp']
