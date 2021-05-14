@@ -1,6 +1,6 @@
 let fetch = require('node-fetch')
 let handler = async (m, { conn, text }) => {
-    if (!text) throw 'Cari apa?'
+    if (!text) throw 'What are you looking for? 🤣'
     let res = await fetch(global.API('xteam', '/search/grupwa', {
         q: text
     }, 'APIKEY'))
