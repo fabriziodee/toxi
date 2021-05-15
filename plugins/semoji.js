@@ -5,12 +5,12 @@ const { sticker } = require('../lib/sticker')
 const { MessageType } = require('@adiwajshing/baileys')
 
 let handler = async (m, { usedPrefix, conn, args, text }) => {
-  let [tipe, emoji] = text.includes('|') ? text.split('|') : args
+  let [tipe, emoji] = text.includes('/') ? text.split('/') : args
   if (tipe && !emoji) {
     emoji = tipe
     tipe = 'whatsapp'
   }
-  if (!emoji) throw `Silahkan masukan emojinya\n\nMisal ${usedPrefix}semoji whatsapp 😎\n\nList Tipe:
+  if (!emoji) throw `Please enter a emoji\n\nExample ${usedPrefix}semoji whatsapp/😎\n\nList of types:
 - whatsapp
 - facebook
 - apple
@@ -23,7 +23,7 @@ let handler = async (m, { usedPrefix, conn, args, text }) => {
 // `.trim())
   m.reply(stiker)
 }
-handler.help = ['semoji [tipe] <emoji>']
+handler.help = ['semoji']
 handler.tags = ['sticker']
 handler.command = /^s?emo(ji)?$/i
 module.exports = handler
