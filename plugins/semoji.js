@@ -23,7 +23,7 @@ let handler = async (m, { usedPrefix, conn, args, text }) => {
 // `.trim())
   m.reply(stiker)
 }
-handler.help = ['semoji']
+handler.help = ['semoji [tipe] <emoji>']
 handler.tags = ['sticker']
 handler.command = /^s?emo(ji)?$/i
 module.exports = handler
