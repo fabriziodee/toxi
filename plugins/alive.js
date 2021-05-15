@@ -10,7 +10,7 @@ _Contact Developer :_ *Wa.me/919544707896*
 _Branch :_ *master*
 _Version :_ *1.0.0*
 
-*Type !menu for all Commands 😁*
+*Type ${usedPrefix}menu for all Commands 😁*
 
  - - - - - - - - *[ ALIVE ]* - - - - - - - - -
 `.trim(), m)
