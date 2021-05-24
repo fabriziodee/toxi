@@ -3,7 +3,7 @@ let handler  = async (m, { conn, usedPrefix: _p }) => {
 *Will Be Available Soon*
 `.trim(), m)
 }
-handler.help = ['list']
+handler.help = ['help']
 handler.tags = ['tools']
 handler.command = /^(alive)$/i
 handler.owner = false
